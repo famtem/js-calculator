@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+        <form name="calculator">
+           <table>
+              <tr>
+                 <td colspan="4">
+                    <input type="text" name="display" id="display" disabled>
+                 </td>
+              </tr>
+              <tr>
+                 <td><input type="button" name="one" id="userinput" value="1" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="two" id="userinput2" value="2" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="three" id="userinput3" value="3" onclick="addNums(this.value)"></td>
+                 <td><input type="button" id="addbtn" class="operator" name="plus" value="+" onclick=" addBtn()"></td>
+                 
+              </tr>
+              <tr>
+                 <td><input type="button" name="four" value="4" id="userinput4" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="five" value="5" id="userinput5" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="six" value="6" id="userinput6" onclick="addNums(this.value)"></td>
+                 <td><input type="button" class="operator" name="minus" value="-" id="subbtn" onclick="minusBtn()"></td>
+              </tr>
+              <tr>
+                 <td><input type="button" name="seven" value="7" id="userinput7" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="eight" value="8" id="userinput8" onclick="addNums(this.value)"></td>
+                 <td><input type="button" name="nine" value="9" id="userinput9" onclick="addNums(this.value)"></td>
+                 <td><input type="button" class="operator" name="times" value="/" id="rootbtn" onclick="rootBtn()"></td>
+              </tr>
+              <tr>
+                 <td><input type="button" id="clear" name="clear" value="c" onclick="resetCalculator()"></td>
+                 <td><input type="button" name="zero" value="0" id="userinput0" onclick="addNums0()"></td>
+                 <td><input type="button" name="doit" value="=" id="solve" onclick="solveMath()"></td>
+                 <td><input type="button" class="operator" name="div" id="rootbtn" value="√" onclick="squarerootBtn(this.value)"></td>
+              </tr>
+              <tr>
+               <td><input type="button" class="operator" name="div" value="^" id="squarebtn" onclick="squareBtn()"></td>
+            </tr>
+              <!-- <td colspan="4">
+               <input style="text" type="text" name="display" value="=" id="display" disabled>
+            </td> -->
+           </table>
+        </form>
+        <script src="script.js">
+
+
+
+        </script>     
+</body>
+</html>
