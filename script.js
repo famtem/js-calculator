@@ -34,6 +34,7 @@ var fn='';
     addbtn.disabled=true
     subbtn.disabled=true
     rootbtn.disabled=true
+    solvebtn.disabled=true
  }
 
 //for enable button
@@ -110,7 +111,35 @@ function minusBtn(){
       subbtn.disabled=true;
       displayer.value
       arrayOfNum.push(fn);
+      console.log(arrayOfNum)
+      inputNum.disabled=true
+      inputNum2.disabled=true
+      inputNum3.disabled=true
+
+      inputNum9.disabled=true
+   }else{
+       console.log('')
+   }
+}
+
+//divide button
+
+function divideBtn(){
+    operatorBtn= '/'
+    subbtn.disabled=true;
+    rootbtn.disabled=true;
+    addbtn.disabled=true
+   // squarebtn.disabled=true
+    if(arrayOfNum.length<2){
+      arrayOfNum.push(fn);
+      console.log(arrayOfNum)
+      displayer.value='';
+      fn="";
       
+   }else if(arrayOfNum.length=2){
+      displayer.value
+      arrayOfNum.push(fn);
+      addbtn.disabled=true;
       console.log(arrayOfNum)
       inputNum.disabled=true
       inputNum2.disabled=true
@@ -145,6 +174,17 @@ function solveMath(){
         }
         displayer.value=arrayOfNum.join(' - ')+ "="+ total;
         console.log(total);
+    }else if (operatorBtn=="/") {
+        //disableBtn();
+        arrayOfNum.push(fn);
+        console.log(arrayOfNum)
+        var total =arrayOfNum[0];
+        for (var i = 0; i < arrayOfNum.length; i++, arrayOfNum[i]) {
+            total =(arrayOfNum[0]/arrayOfNum[1]);
+        }
+        displayer.value=arrayOfNum.join(' / ')+ "="+ total;
+        console.log(total);
+        disableBtn();
     } else {
         
     }
@@ -169,7 +209,6 @@ function squareBtn(){
     rootbtn.disabled = true
    square= fn*fn; 
    displayer.value = square;
-  
 }
 
 // this function resets the calculation
@@ -180,6 +219,7 @@ function resetCalculator(){
     val='';
     displayer.value='';
     enableBtn();
+    solvebtn.disabled=false;
     console.log(arrayOfNum+'reset done')
 }
 
