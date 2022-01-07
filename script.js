@@ -151,6 +151,30 @@ function divideBtn(){
    }
 }
 
+//square root button functionality
+
+
+function squarerootBtn(){  
+    // disableBtn();
+   console.log("√")
+   //fn= displayer.value = val
+   root= Math.sqrt(fn);
+   displayer.value = "√"+ fn +"="+ root;
+   disableBtn();
+ }
+ 
+
+
+ // root of a number
+ 
+ function squareBtn(){  
+     disableBtn();
+     solvebtn.disabled = true;
+     rootbtn.disabled = true
+    square= fn*fn; 
+    displayer.value = square;
+ }
+ 
 //
 
 function solveMath(){
@@ -191,25 +215,6 @@ function solveMath(){
    
 }
 
-//
-
-function squarerootBtn(val){  
-   // disableBtn();
-console.log(val)
-   displayer.value = val
-   root= Math.sqrt(fn);
-   displayer.value = root;
-}
-
-//
-
-function squareBtn(){  
-    disableBtn();
-    solvebtn.disabled = true;
-    rootbtn.disabled = true
-   square= fn*fn; 
-   displayer.value = square;
-}
 
 // this function resets the calculation
 
